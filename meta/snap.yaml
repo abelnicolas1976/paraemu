@@ -1,0 +1,41 @@
+name: paraemu
+version: '1.170409'
+summary: FrontEnd para emuladores
+icon: meta/gui/icon.png
+publisher: Abel Sendón (Sendon Software)
+description: |
+  paraEmu es un frontend para distintos emuladores, permite abrir de forma
+  indistinta tanto ROMs de Atari como imagenes ISO de Wii o PS2, además de
+  copiar/restaurar/backupear las memcards de las distintas consolas.
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: classic # use 'strict' once you have the right plugs and slots
+
+parts:
+  my-part:
+    # See 'snapcraft plugins'
+    plugin: python
+
+    source: https://github.com/abelnicolas1976/paraemu.git
+    stage-packages:
+      - qjoypad
+      - mame
+      - stella
+      - pcsx2:i386
+      - pcsxr
+      - python2.7
+      - dolphin-emu
+      - zsnes
+      - yabause-qt
+      - virtualjaguar
+      - desmume
+      - dosbox
+      - libatk1.0-0
+      - libcairo2
+      - libgl1:i386
+      - libgl1
+      - libgl1-mesa-glx
+      - libgtk2.0-0
+      - libpango1.0-0
+      - libsdl1.2debian
+      - zlib1g
