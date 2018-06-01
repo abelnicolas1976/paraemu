@@ -1,0 +1,82 @@
+name: paraemu
+version: '2.180528'
+summary: FrontEnd para emuladores
+icon: meta/gui/icon.png
+description: |
+  paraEmu es un frontend para distintos emuladores, permite abrir de forma
+  indistinta tanto ROMs de Atari como imagenes ISO de Wii o PS2, además de
+  copiar/restaurar/backupear las memcards de las distintas consolas.
+architectures:
+- amd64
+grade: stable
+confinement: classic
+
+apps:
+  paraemu:
+    command:  command-paraemu.wrapper
+
+source: https://github.com/abelnicolas1976/paraemu.git
+stage-packages:
+  - qjoypad
+  - mame
+  - mame-extra
+  - mame-data
+  - stella
+  - pcsx2:i386
+  - libcurl4
+  - libcurl4-gnutls-dev
+  - libogg0
+  - libflac8
+  - python2.7
+  - dolphin-emu
+  - libssl1.0.0
+  - libssl1.1
+  - zsnes
+  - yabause-qt
+  - virtualjaguar
+  - desmume
+  - dosbox
+  - libatk1.0-0
+  - libcairo2
+  - libgl1
+  - libgl1-mesa-glx
+  - libgtk2.0-0
+  - libpango1.0-0
+  - libsdl1.2debian
+  - zlib1g
+  - fceux
+  - gfceu
+  - libmupen64plus2
+  - mupen64plus-data
+  - mupen64plus-qt
+  - mupen64plus-ui-console
+  - mupen64plus-audio-all
+  - mupen64plus-video-all
+  - libqt5core5a
+  - libqt5gui5
+  - libqt5network5
+  - libqt5sql5
+  - libqt5sql5-sqlite
+  - libqt5widgets5
+  - libqt5xml5
+  - libquazip5-1
+  - libstdc++6
+  - psmisc
+  - libsdl2-2.0-0:i386
+  - pulseaudio:i386
+  - libjack0:i386
+  - libgtk-3-0
+  - libgtk-3-0:i386
+  - visualboyadvance
+  - alsa-base
+  - pulseaudio
+  - zenity
+  - python-evdev
+  - coreutils
+  - tar
+  - bzip2
+  - mousepad
+  - libfreetype6
+  - libfreetype6:i386
+  - libpng16-16
+  - libpng16-16:i386
